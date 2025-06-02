@@ -1,0 +1,156 @@
+* {
+    background-color: darkgreen;
+}
+button {
+    background-color: #AF6C08;
+    color: white;
+}
+button:hover {
+    background-color: black;
+    color: gray;
+}
+option {
+    background-color: #AF6C08;
+    color: white;
+}
+.header {
+  color: #AF6C08;
+  font-family: Georgia, serif;
+  margin-left: 525px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #AF6C08;
+}
+.quizAnswers {
+   display: flex;
+   justify-content: space-evenly; 
+}
+.link:visited {
+    color: #4D0761;
+}
+.link {
+  color: #AF6C08;
+}
+.link:hover {
+  color:purple;
+}
+.subheader {
+  color: #AF6C08;
+  font-family: Georgia, serif;
+  margin-left: 10px;
+}
+.mainText {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 10px;
+    font-size: 13pt;
+}
+.listItem {
+    margin-bottom: 50px;
+}
+.oneByTwoGrid {
+    display: grid;
+    border: 5px solid #AF6C08;
+    grid-template-rows: auto;
+    grid-template-columns: 700px 700px;
+}
+.twoByTwoGrid {
+    display: grid;
+    border: 5px solid #AF6C08;
+    grid-template-rows: auto auto;
+    grid-template-columns: 700px 700px;
+}
+.threeByTwoGrid {
+    display: grid;
+    border: 5px solid #AF6C08;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 700px 700px;
+}
+.caption {
+    color: white;
+    font-style: italic;
+    padding: 2px;
+    font-size: 11px;
+    text-align: center;
+  }
+#quiz {
+    margin-top: 10px;
+}
+#questionsAboutBaseball {
+    background-color: white;
+    margin-left: 10px;
+}
+#baseballPositions {
+    background-color: #AF6C08;
+    color: white;
+}
+#leagueLogos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#batGlove {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#baseballBat {
+    width: 300px;
+    height: 150px;
+}
+#glove {
+    width: 175px;
+    height: 200px;
+}
+#bestTeam {
+    width: 400px;
+    height: 400px;
+}
+#MLBLogo {
+    width: 150px;
+    height: 75px;
+}
+#KBOLogo {
+    height: 120px;
+}
+#NPBLogo {
+    width: 120px;
+    height: 100px;
+}
+#LIDOMLogo {
+    width: 130px;
+    height: 100px;
+}
+#fieldingPositions {
+  display: block;
+  width: 500px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#cartwright {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#baseball {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 36px;
+}
+#fraudExposerButton {
+    margin-left: 200px;
+}
+#bestTeamButton {
+    margin-left: 50px;
+    margin-bottom: 50px;
+}

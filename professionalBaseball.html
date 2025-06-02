@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Baseball</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="script.js"></script>
+</head>
+<body>
+  <h1 class="header"> Professional Baseball </h1>
+    <div class="navbar">
+      <button onclick="document.location.href = '../dias-html-assignment3/keyInfoPage.html'"> Rules and History </button>
+      <button onclick="document.location.href = '../dias-html-assignment3/index.html'"> Introduction to Baseball </button>
+    </div>
+  <div class="twoByTwoGrid">
+   <article>
+     <h2 class="subheader"> Where is Professional Baseball Played? </h2>
+     <p class="mainText"> The main places where professional baseball is played are as follows:
+     <ul class="mainText"> <li class="listItem"> <a class="link" href="https://www.mlb.com/"> MLB</a> and <a class="link" href="https://www.milb.com/"> MILB</a> in the US </li> <li class="listItem"> <a class="link" href="http://eng.koreabaseball.com/">KBO</a>  in Korea </li> <li class="listItem"> <a class="link" href="https://npb.jp/eng/">NPB</a> in Japan </li> <li class="listItem"> Winter Leagues in the Dominican Republic (<a class="link" href="https://lidom.com/">LIDOM</a>) and Puerto Rico (<a class="link" href="https://www.ligapr.com/">LBPRC</a>)</li> <li class="listItem"> The <a class="link" href="https://www.milb.com/mexican">LMB</a> in Mexico </li></ul> </p>
+     <p id="yWorldSeries" class="mainText"></p>
+     <h2 class="subheader"> Questions about Baseball</h2>
+     <ol id="theQuestions" class="mainText"></ol>
+     <input id="questionsAboutBaseball" placeholder="Ask Questions here"><button onclick="return questionAdder()"> Submit </button></input>
+    </article>
+   <section id="leagueLogos">
+      <figure>
+	<img src="https://logodownload.org/wp-content/uploads/2020/07/mlb-logo.png" alt="the MLB logo" id="MLBLogo" onmouseover="mlbWinner()" onmouseleave="mlbLeave()">
+	<figcaption class="caption" id="MLBCaption"> The MLB Logo. From logodownload.org. </figcaption>
+      </figure>
+      <figure>
+	<img src="https://seeklogo.com/images/K/kbo-korea-baseball-organization-logo-5C5BB96096-seeklogo.com.png" alt="the KBO logo" id="KBOLogo" onmouseover="kboWinner()" onmouseleave="kboLeave()">
+	<figcaption class="caption" id="KBOCaption"> The KBO Logo. From sportslogos.net. </figcaption>
+      </figure>
+      <figure>
+	<img src="https://content.sportslogos.net/logos/75/2316/full/a6a8sz0eo3fbj75hhtsg.gif" alt="the NPB logo" id="NPBLogo" onmouseover="npbWinner()" onmouseleave="npbLeave()">
+	<figcaption class="caption" id="NPBCaption"> The NPB Logo. From sportslogos.net. </figcaption>
+      </figure>
+      <figure>
+	<img src="https://1000logos.net/wp-content/uploads/2018/11/Lidom-logo.png" alt="the LIDOM logo" id="LIDOMLogo" onmouseover="lidomWinner()" onmouseleave="lidomLeave()">
+	<figcaption class="caption" id="LIDOMCaption"> The LIDOM Logo. From 1000logos.net. </figcaption>
+      </figure>
+   </section>
+   <section>
+    <figure>
+      <img src = "https://i.ytimg.com/vi/1SMfeIw1iDM/maxresdefault.jpg" alt="the logo of the best baseball team in the world (no bias)" id="bestTeam">
+    </figure>
+    <button onclick="bestTeamShower()" id="bestTeamButton">See the Logo of the Best Baseball Team Ever (no bias)</button>
+   </section>
+   <section id="quiz">
+    <h2 class="subheader">Fun Baseball Quiz</h2>
+    <p class="mainText" id="question1"> Who is Baseball's alltime leader in home runs?</p>
+    <div id = "question1Buttons"> <button onclick="question1Wrong()"> Herman "Babe" Ruth </button> <button onclick="question1Correct()"> Barry Bonds </button> <button onclick="question1Wrong()"> Robert Prevost </button> <button onclick="question1Wrong()"> Henry "Hank" Aaron </button> </div>
+    <p class="mainText" id="question2"> Which Baseball team won the first ever World Series?</p>
+    <div id = "question2Buttons"> <button onclick="question2Wrong()"> The Baltimore Batswingers </button> <button onclick="question2Wrong()"> The Los Angeles Dodgers </button> <button onclick="question2Wrong()"> The New York Yankees </button> <button onclick="question2Correct()"> The Boston Red Sox </button> </div>
+    <p class="mainText" id="question3"> Who invented modern baseball?</p>
+    <div id = "question3Buttons"> <button onclick="question3Wrong()"> Alexander Cartwright </button> <button onclick="question3Wrong()"> William Wheaton </button> <button onclick="question3Wrong()"> Walter White </button> <button onclick="question3Correct()"> A Collective Effort Across Generations </button> </div>
+    <p class="mainText" id="question4"> How many players are on the field at any given time for the fielding team?</p>
+    <div id = "question4Buttons"> <button onclick="question4Wrong()"> 1 </button> <button onclick="question4Wrong()"> 42 </button> <button onclick="question4Correct()"> 9 </button> <button onclick="question4Wrong()"> 8 </button> </div>
+    <p class="mainText" id="question5"> Which of these people is a baseball player?</p>
+    <div id = "question5Buttons"> <button onclick="question5Wrong()"> Nathan Schmitt </button> <button onclick="question5Wrong()"> Jake DeBrusk </button> <button onclick="question5Wrong()"> Tommy Tuberville </button> <button onclick="question5Correct()"> Dustin Pedroia </button> </div>
+    <p class="mainText" id="question6"> Which of these words is NOT a common baseball term?</p>
+    <div id = "question6Buttons"> <button onclick="question6Correct()"> A Sidewinder </button> <button onclick="question6Wrong()"> A Ground-Rule Double </button> <button onclick="question6Wrong()"> A Perfect Game </button> <button onclick="question6Wrong()"> A Sword </button> </div>
+   </section>
+  </div>
+</body>
+</html>
