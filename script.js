@@ -29,6 +29,9 @@ function dropDownHandler() {
     }
     
 }
+function softballButtonHandler() {
+    document.location.href = 'https://www.baseballprospectus.com/news/article/92379/athletes-unlimited-and-a-new-model-for-pro-sports/';
+}
 function mlbWinner() {
     document.getElementById("MLBCaption").innerText = ("The World Series in 2024 was won by the Los Angeles Dodgers.");
     document.getElementById("MLBLogo").src = ("https://logos-world.net/wp-content/uploads/2020/05/Los-Angeles-Dodgers-Logo-1968-1971.png");
@@ -67,6 +70,8 @@ function fraudExposer() {
 }
 function bestTeamShower() {
     document.querySelector("#bestTeam").src = ("https://purepng.com/public/uploads/medium/boston-red-sox-logo-0ue.png");
+    document.querySelector("#bestTeamButton").style.display = "none";
+    document.querySelector("#bestTeamText").innerText = "The best baseball team in the world is indisputably the Boston Red Sox."
 }
 function question1Correct() {
     document.querySelector("#question1").innerText = ("Barry Bonds is correct!");
@@ -105,12 +110,12 @@ function question5Correct() {
     document.querySelector("#question5Buttons").style.display = "none";
 }
 function question5Wrong() {
-    document.querySelector("#question5").innerText = ("Incorrect! The baseball player was Dustin Pedroia");
+    document.querySelector("#question5").innerText = ("Incorrect! The baseball player was Dustin Pedroia, who was a Second Baseman for the Boston Red Sox from 2006-2019.");
     document.querySelector("#question5Buttons").style.display = "none";
 }
 function question6Correct() {
-    document.querySelector("#question4").innerText = ("Correct! A sidewinder is not an actual baseball term.");
-    document.querySelector("#question4Buttons").style.display = "none";
+    document.querySelector("#question6").innerText = ("Correct! A sidewinder is not an actual baseball term.");
+    document.querySelector("#question6Buttons").style.display = "none";
 }
 function question6Wrong() {
     document.querySelector("#question6").innerText = ("Wrong! All of these are actual baseball terms except a sidewinder.");
@@ -123,17 +128,70 @@ function yankeesWorldSeriesCalculator() {
 }
 function questionAdder() {
     var question = document.getElementById("questionsAboutBaseball").value
+    if (document.querySelector("#theQuestions").childElementCount == 5) {
+        alert("If you have a lot of questions in a way that is making information hard to find, type 'clear' into the question box and it will get rid of all of your questions.");
+    }
     if (question == "") {
         alert("This textfield is empty, Please enter an question to have it show up on the page.");
         return false;
     }
-    if (question.charAt(question.length - 1) != '?') {
+    else if (question == "clear") {
+        var theQuestionList = document.querySelector("#theQuestions");
+        while (theQuestionList.hasChildNodes()) {
+            theQuestionList.removeChild(theQuestionList.firstElementChild)
+        }
+    }
+    else if (question.charAt(question.length - 1) != '?') {
         alert("That is not a question. Please enter a question with a ? at the end to have it show up on the page.");
         return false;
     }
-    var li = document.createElement('li');
-    li.innerText = (question);
-    document.querySelector("#theQuestions").appendChild(li);
+    else if (question.toLowerCase() == "what is a homerun?" || question.toLowerCase() == "what is a home run?" || question.toLowerCase() == "what is a home-run?"){
+        var li = document.createElement('li');
+        li.innerText = (question + "\n" + "A homerun is when you hit the ball over the fence without it touching the ground first. This type of hit scores every single person on base, including the batter.");
+        document.querySelector("#theQuestions").appendChild(li);
+    }
+    else if (question.toLowerCase() == "what are other versions of baseball?" || question.toLowerCase() == "what are similar sports to baseball?"){
+        document.querySelector("#softballButton").style.display = "inline";
+        var li = document.createElement('li');
+        li.innerText = (question + "\n" + "The most commonly played alternate version of competetive baseball played is softball, which is played at both the collegiate level, at most major colleges, and professionally, through the Athletes Unlimited Softball League (click the button below for more details). More casually, two commonly played backyard versions of baseball are wiffleball and blitzball, and you could argue that kickball is a form of baseball as well.");
+        document.querySelector("#theQuestions").appendChild(li);
+    }
+    else if (question.toLowerCase() == "what about softball?" || question.toLowerCase() == "what is softball?"){
+        document.querySelector("#softballButton").style.display = "inline";
+        var li = document.createElement('li');
+        li.innerText = (question + "\n" + "Softball is played at both the collegiate level, at most major colleges, and professionally, through the Athletes Unlimited Softball League (click the button below for more details). Softball can also be played casually, and can be played by anybody, though it is traditionally played by women.");
+        document.querySelector("#theQuestions").appendChild(li);
+    }
+    else if (question.toLowerCase() == "which team has won the most world series?" || question.toLowerCase() == "who won the most world series?" || question.toLowerCase() == "who has won the most world series?"){
+        var li = document.createElement('li');
+        li.innerText = (question + "\n" + "The New York Yankees with 28 World Series wins.");
+        document.querySelector("#theQuestions").appendChild(li);
+    }
+    else if (question.toLowerCase() == "when is the super bowl?"){
+        var li = document.createElement('li');
+        li.innerText = (question + "\n" + "I don't know, this is a baseball website, not a football website.");
+        document.querySelector("#theQuestions").appendChild(li);
+    }
+    else if (question.toLowerCase() == "who is the greatest baseball player of all time?"){
+        var li = document.createElement('li');
+        li.innerText = (question + "\n" + "That is a controversial question. Generally, people believe one of Babe Ruth, Willie Mays, Henry 'Hank Aaron, or (if you don't care about steroids) Barry Bonds to be the greatest player of all time, but it is a spirited and open-ended debate at the end of the day.");
+        document.querySelector("#theQuestions").appendChild(li);
+    }
+     else if (question.toLowerCase() == "when is the world series?"){
+        var li = document.createElement('li');
+        li.innerText = (question + "\n" + "Generally in late October and early November.");
+        document.querySelector("#theQuestions").appendChild(li);
+    }
+     else if (question.toLowerCase() == "who won last years college world series" || question.toLowerCase() == "who won the last college world series?" || question.toLowerCase() == "who won the pervious college world series?"){
+        var li = document.createElement('li');
+        li.innerText = (question + "\n" + "The Tennessee Volunteers.");
+        document.querySelector("#theQuestions").appendChild(li);
+    }
+    else {
+        var li = document.createElement('li');
+        li.innerText = (question);
+        document.querySelector("#theQuestions").appendChild(li);
+    }
 }
 var angle = 0; // Global variable to track rotation
 function rotate() { 

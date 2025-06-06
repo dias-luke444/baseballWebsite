@@ -22,6 +22,8 @@ option {
   display: flex;
   justify-content: space-evenly;
   background-color: #AF6C08;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 .quizAnswers {
    display: flex;
@@ -53,18 +55,24 @@ option {
 .oneByTwoGrid {
     display: grid;
     border: 5px solid #AF6C08;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     grid-template-rows: auto;
     grid-template-columns: 700px 700px;
 }
 .twoByTwoGrid {
     display: grid;
     border: 5px solid #AF6C08;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     grid-template-rows: auto auto;
     grid-template-columns: 700px 700px;
 }
 .threeByTwoGrid {
     display: grid;
     border: 5px solid #AF6C08;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     grid-template-rows: auto auto auto;
     grid-template-columns: 700px 700px;
 }
@@ -77,6 +85,7 @@ option {
   }
 #quiz {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 #questionsAboutBaseball {
     background-color: white;
@@ -132,6 +141,8 @@ option {
   margin-right: auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 #cartwright {
     width: 200px;
@@ -153,4 +164,7 @@ option {
 #bestTeamButton {
     margin-left: 50px;
     margin-bottom: 50px;
+}
+#softballButton {
+    display: none;
 }

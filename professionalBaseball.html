@@ -9,8 +9,8 @@
 <body>
   <h1 class="header"> Professional Baseball </h1>
     <div class="navbar">
-      <button onclick="document.location.href = '../dias-html-assignment3/keyInfoPage.html'"> Rules and History </button>
-      <button onclick="document.location.href = '../dias-html-assignment3/index.html'"> Introduction to Baseball </button>
+      <button onclick="document.location.href = './keyInfoPage.html'"> Rules and History </button>
+      <button onclick="document.location.href = './index.html'"> Introduction to Baseball </button>
     </div>
   <div class="twoByTwoGrid">
    <article>
@@ -20,9 +20,10 @@
      <p id="yWorldSeries" class="mainText"></p>
      <h2 class="subheader"> Questions about Baseball</h2>
      <ol id="theQuestions" class="mainText"></ol>
-     <input id="questionsAboutBaseball" placeholder="Ask Questions here"><button onclick="return questionAdder()"> Submit </button></input>
+     <input id="questionsAboutBaseball" placeholder="Ask questions here."><button onclick="return questionAdder()"> Submit </button><button id="softballButton" onclick="softballButtonHandler()">Read More About the AUSL</button></input>
     </article>
    <section id="leagueLogos">
+      <h2 class="subheader"> League Logos and Champions </h2>
       <figure>
 	<img src="https://logodownload.org/wp-content/uploads/2020/07/mlb-logo.png" alt="the MLB logo" id="MLBLogo" onmouseover="mlbWinner()" onmouseleave="mlbLeave()">
 	<figcaption class="caption" id="MLBCaption"> The MLB Logo. From logodownload.org. </figcaption>
@@ -45,6 +46,7 @@
       <img src = "https://i.ytimg.com/vi/1SMfeIw1iDM/maxresdefault.jpg" alt="the logo of the best baseball team in the world (no bias)" id="bestTeam">
     </figure>
     <button onclick="bestTeamShower()" id="bestTeamButton">See the Logo of the Best Baseball Team Ever (no bias)</button>
+    <p id="bestTeamText" class="mainText"></p>
    </section>
    <section id="quiz">
     <h2 class="subheader">Fun Baseball Quiz</h2>
