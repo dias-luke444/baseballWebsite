@@ -66,7 +66,8 @@ function lidomLeave() {
 }
 function fraudExposer() {
     document.getElementById("cartwright").src = ("https://i.ytimg.com/vi/5tCAtoqZuOY/maxresdefault.jpg");
-    document.getElementById("cartwrightCaption").innerText = ("Nobody 'invented' Baseball. It naturally developed over time with the contributions of countless people over multiple centuries.")
+    document.getElementById("cartwrightCaption").innerText = ("Nobody 'invented' Baseball. It naturally developed over time with the contributions of countless people over multiple centuries.");
+    document.querySelector("#fraudExposerButton").style.display = "none";
 }
 function bestTeamShower() {
     document.querySelector("#bestTeam").src = ("https://purepng.com/public/uploads/medium/boston-red-sox-logo-0ue.png");
